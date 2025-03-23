@@ -1,0 +1,77 @@
+@import "tailwindcss/base";
+@import "./custom-base-styles.css";
+
+@import "tailwindcss/components";
+@import "./custom-components.css";
+
+@import "tailwindcss/utilities";
+@import "./custom-utilities.css";
+
+body {
+    background-color: #191919;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+}
+
+header {
+    font-size: 60pt;
+    font-weight: bold;
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 30pt;
+    font-weight: bold;
+    padding-left: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.button-row{
+    display: flex;
+    justify-content: flex-end;
+    letter-spacing: 1.5px;
+    padding: 10px;
+}
+
+.nav-link {
+    position: relative;
+    text-decoration: none;
+}
+
+.nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: currentColor;
+    transition: width 0.5s ease-in-out;
+}
+
+.nav-link:hover::before {
+    width: 100%;
+}
+
+.divider{
+    letter-spacing: 10px;
+    padding-left: 10px;
+}
+
+.projects-row{
+    padding-top: 1.25rem; 
+    padding-left: 2.5rem; 
+    grid-template-columns: repeat(5, minmax(0, 1fr)); 
+    gap: 2.5rem; 
+    align-content: flex-start; 
+    height: 10rem;
+}
