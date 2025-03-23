@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melinda Morkeh</title>
+
+    <!-- stylesheets-->
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- icons -->
+    <script src="https://kit.fontawesome.com/3e80d490d4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+    <!-- script files-->
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+
+<body class="text-gray-300">
+    <!-- page header -->
+    <header class="relative site-header mx-4 md:mx-10 lg:mx-20">
+        <!-- navigation buttons -->
+        <nav class="navbar rounded-box shadow p-4">
+            <div class="w-full flex items-center md:gap-2">
+                <div class="flex items-center justify-between w-full">
+                    <!-- Navbar Brand -->
+                    <a class="text-base font-bold text-neutral no-underline text-6xl" href="index.html">
+                        Melinda Morkeh
+                    </a>
+
+                    <!-- Mobile Menu Button -->
+                    <div class="md:hidden">
+                        <button id="nav-toggle" class="btn btn-outline btn-secondary btn-sm btn-square">
+                            <span id="menu-icon" class="icon-[tabler--menu-2] size-4"></span>
+                            <span id="close-icon" class="icon-[tabler--x] size-4 hidden"></span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Navbar Links -->
+                <div id="navbar-menu" class="hidden md:flex">
+                    <ul class="flex gap-6 text-base text-2xl">
+                        <li><a href="#about-section" class="nav-link">about</a></li>
+                        <li><a href="#skills-section" class="nav-link">skills</a></li>
+                        <li><a href="#projects-section" class="nav-link">projects</a></li>
+                        <li><a href="#contact-section" class="nav-link">contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- main content -->
+    <main class="relative mx-4 md:mx-10 lg:mx-20 pt-10 pb-20 mx-auto">
+        <!-- biography card -->
+        <div class="flex justify-center w-full">
+            <div class="block justify-self-left p-6 border rounded-lg shadow-sm">
+                <header class="mb-2 text-4xl font-bold tracking-tight">Melinda Morkeh</header>
+                <p class="font-normal">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor aliquam lacinia. Sed in ligula sapien. Praesent bibendum neque vel nisi congue, a hendrerit elit dapibus. Proin et varius arcu. Pellentesque convallis eu nisi in cursus. Phasellus ullamcorper purus eros, sit amet dictum sapien dapibus at. Cras hendrerit nisl vitae magna commodo, non egestas nibh laoreet. Pellentesque non tellus nisl. Aliquam imperdiet orci non ipsum tincidunt, eu auctor enim eleifend. In iaculis, velit eu pellentesque blandit, lectus ex facilisis diam, sit amet varius quam nunc sit amet nibh. Phasellus dapibus, risus quis ultrices fringilla, sapien sapien scelerisque justo, et fermentum nunc urna in dui.
+                </p>
+                <div class="grid justify-self-center fa-2x grid-cols-3 pt-5 gap-4 content-start h-20">
+                    <a href="https://www.linkedin.com/in/melinda-morkeh-351b74259/" class="fa-brands fa-linkedin transition duration-300 hover:opacity-75"></a>
+                    <a href="https://github.com/melindamorkeh" class="fa-brands fa-github transition duration-300 hover:opacity-75"></a>
+                    <a class="fa-solid fa-file-pdf transition duration-300 hover:opacity-75"></a>
+                </div>
+            </div>
+        </div>
+
+        <h1 id="experience-section" class="justify-self-left pt-20">experience</h1>
+        <div class="relative border-l-4 border-gray-300 max-w-3xl">
+            <!-- Job 1 -->
+            <div class="relative mb-8 pl-6">
+                <div class="absolute bg-gray-300 w-4 h-4 rounded-full top-2.5" style="margin-left: -2.25rem;"></div>
+                <h3 class="text-blue-300 font-semibold">Jane Street</h3>
+                <h4 class="text-lg font-bold">Insight Spring Programme</h4>
+                <p class="text-gray-400 text-sm">April 2025</p>
+                <p class="text-gray-300 mt-2">
+                    lorem ipsum
+                </p>
+            </div>
+
+            <!-- Job 2 -->
+            <div class="relative mb-8 pl-6">
+                <div class="absolute bg-gray-300 w-4 h-4 rounded-full top-2.5" style="margin-left: -2.25rem;"></div>
+                <h3 class="text-blue-300 font-semibold">Legal Pythia</h3>
+                <h4 class="text-lg font-bold">AI and Machine Learning Intern</h4>
+                <p class="text-gray-400 text-sm">March 2025</p>
+                <p class="mt-2">
+                    lorem ipsum
+                </p>
+            </div>
+
+            <!-- Job 3 -->
+            <div class="relative mb-8 pl-6">
+                <div class="absolute bg-gray-300 w-4 h-4 rounded-full top-2.5" style="margin-left: -2.25rem;"></div>
+                <h3 class="text-blue-300 font-semibold">Jane Street</h3>
+                <h4 class="text-lg font-bold">Focus Programme</h4>
+                <p class="text-gray-400 text-sm">January 2025</p>
+                <p class="mt-2">
+                    lorem ipsum
+                </p>
+            </div>
+
+            <!-- Job 4 -->
+            <div class="relative mb-8 pl-6">
+                <div class="absolute bg-gray-300 w-4 h-4 rounded-full top-2.5" style="margin-left: -2.25rem;"></div>
+                <h3 class="text-blue-300 font-semibold">J.P. Morgan Chase</h3>
+                <h4 class="text-lg font-bold">Summer Work Experience</h4>
+                <p class="text-gray-400 text-sm">August 2023</p>
+                <p class="mt-2">
+                    lorem ipsum
+                </p>
+            </div>
+        </div>
+
+        <!-- skills section -->
+        <h1 id="skills-section" class="justify-self-left">skills</h1>
+
+        <!-- languages section -->
+        <h1 class="font-medium text-4xl">languages</h1>
+        <div class="justify-self-left mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-9 xl:grid-cols-9 content-start pt-5 pl-10 fa-3x gap-4 lg:gap-8">
+            <div class="flex items-center space-x-2 lg:space-x-4">
+                <i class="fa-brands fa-python"></i>
+                <span class="text-base">Python</span>
+            </div>
+            <div class="flex items-center space-x-2 lg:space-x-4">
+                <i class="fa-brands fa-java"></i>
+                <span class="text-base">Java</span>
+            </div>
+            <div class="flex items-center space-x-2 lg:space-x-4">
+                <i class="fa-brands fa-js"></i>
+                <span class="text-base">JavaScript</span>
+            </div>
+            <div class="flex items-center space-x-2 lg:space-x-4">
+                <i class="fa-brands fa-html5"></i>
+                <span class="text-base">HTML5</span>
+            </div>
+            <div class="flex items-center space-x-2 lg:space-x-4">
+                <i class="fa-brands fa-css"></i>
+                <span class="text-base">CSS</span>
+            </div>
+            <div class="flex items-center space-x-2 lg:space-x-4">
+                <i class="fa-solid fa-database"></i>
+                <span class="text-base">SQL</span>
+            </div>
+            <div class="flex items-center space-x-2 lg:space-x-4">
+                <i class="devicon-c-plain"></i>
+                <span class="text-base">C</span>
+            </div>
+            <div class="flex items-center space-x-2 lg:space-x-4">
+                <i class="devicon-haskell-plain"></i>
+                <span class="text-base">Haskell</span>
+            </div>
+            <div class="flex items-center space-x-2 lg:space-x-4">
+                <i class="devicon-scala-plain"></i>
+                <span class="text-base">Scala</span>
+            </div>
+        </div>
+
+        <h1 id="projects-section" class="justify-self-left pt-10">projects</h1>
+        <p class="font-thick justify-self-center pb-10">coming soon</p>
+
+        <!-- insert form here -->
+        <h1 id="contact-section" class="justify-self-left">contact</h1>
+        <div id="contact-form"></div>
+        <script type="text/babel" src="script.js"></script>
+    </main>
+
+    <!-- page footer -->
+    <footer>
+
+    </footer>
+</body>
+</html>
