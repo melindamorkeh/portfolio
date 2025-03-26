@@ -178,9 +178,24 @@
 
         <!-- insert form here -->
         <h1 id="contact-section" class="justify-self-left">contact</h1>
-        <div id="contact-form"></div>
-        <p class="font-thick justify-self-center pb-10">coming soon</p>
-        <script type="text/babel" src="script.js"></script>
+        <div id="contact-form">
+        <!-- modify this form HTML and place wherever you want your form -->
+            <form
+                action="https://formspree.io/f/mnnpzyre"
+                method="POST"
+            >
+                <label>
+                    Your email:
+                    <input type="email" name="email">
+                </label>
+                <label>
+                    Your message:
+                    <textarea name="message"></textarea>
+                </label>
+                <!-- your other form fields go here -->
+                <button type="submit">Send</button>
+            </form>
+        </div>
     </main>
 
     <!-- page footer -->
