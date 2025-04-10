@@ -20,7 +20,6 @@ html {
 }
 
 header {
-    font-size: 60pt;
     font-weight: bold;
     padding: 10px;
     position: relative;
@@ -74,4 +73,18 @@ h1 {
     gap: 2.5rem; 
     align-content: flex-start; 
     height: 10rem;
+}
+
+#typed-name::after {
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    background-color: white;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
 }
