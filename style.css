@@ -7,6 +7,8 @@
 @import "tailwindcss/utilities";
 @import "./custom-utilities.css";
 
+* { box-sizing: border-box; }
+
 body {
     background-color: #191919;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
@@ -75,6 +77,8 @@ h1 {
     height: 10rem;
 }
 
+/* typing name animation */
+
 #typed-name::after {
     content: "";
     display: inline-block;
@@ -87,4 +91,26 @@ h1 {
 @keyframes blink {
     0%, 100% { opacity: 1; }
     50% { opacity: 0; }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll {
+    animation: scroll 40s linear infinite;
+    grid-auto-columns: 1fr;
+    width: auto;
+    min-width: 100%;
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
+  }
+
+.animate-scroll:hover {
+    animation-play-state: paused;
 }
