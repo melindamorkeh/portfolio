@@ -109,6 +109,7 @@ h1 {
     min-width: 100%;
     will-change: transform;
     transform: translate3d(0, 0, 0);
+    flex-shrink: 0 !important;
   }
 
 .animate-scroll:hover {
