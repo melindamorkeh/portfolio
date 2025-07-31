@@ -7,7 +7,12 @@
     <link rel="icon" type="image/png" href="images/favicon.png">
 
     <!-- stylesheets-->
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
     <link rel="stylesheet" href="style.css">
 
     <!-- icons -->
@@ -20,7 +25,7 @@
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 </head>
 
-<body class="text-gray-300">
+<body class="text-[#171717] dark:text-[#e5e5e5] bg-[#fafafa] dark:bg-[#191919]">
     <!-- page header -->
     <header class="relative site-header mx-4 md:mx-10 lg:mx-20">
         <!-- navigation buttons -->
@@ -28,7 +33,7 @@
             <div class="w-full flex items-center md:gap-2">
                 <div class="flex items-center justify-between w-full">
                     <!-- Navbar -->
-                    <div class="text-base font-bold text-neutral no-underline text-6xl" href="index.html">
+                    <div class="font-bold text-neutral no-underline text-6xl" href="index.html">
                         <!-- Melinda Morkeh -->
                         <span id = "typed-name"></span>
                     </div>
@@ -44,12 +49,17 @@
 
                 <!-- Navbar Links -->
                 <div id="navbar-menu" class="hidden md:flex flex-col md:flex-row">
-                    <ul class="flex gap-6 text-base text-2xl">
-                        <li><a href="#about-section" class="nav-link">about</a></li>
-                        <li><a href="#experience-section" class = "nav-link">experience</a></li>
-                        <li><a href="#skills-section" class="nav-link">skills</a></li>
-                        <li><a href="#projects-section" class="nav-link">projects</a></li>
-                        <li><a href="#contact-section" class="nav-link">contact</a></li>
+                    <ul class="flex gap-6 text-base">
+                        <li><a href="#about-section" class="nav-link text-2xl">about</a></li>
+                        <li><a href="#experience-section" class = "nav-link text-2xl">experience</a></li>
+                        <li><a href="#skills-section" class="nav-link text-2xl">skills</a></li>
+                        <li><a href="#projects-section" class="nav-link text-2xl">projects</a></li>
+                        <li class="flex items-center">
+                            <button id="theme-toggle" class="text-2xl rounded-lg transition-colors">
+                                <i id="sun-icon" class="fas fa-sun hidden"></i>
+                                <i id="moon-icon" class="fas fa-moon"></i>
+                            </button>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -78,12 +88,12 @@
         </div>
 
         <!-- experience section -->
-        <h1 id="experience-section" class="justify-self-left pt-20">experience</h1>
-        <div class="relative border-l-4 border-gray-300 w-full">
+        <h1 id="experience-section" class="pt-20 pl-6 pb-2 text-3xl font-bold">experience</h1>
+        <div class="relative border-l-4 border-[#171717] dark:border-[#e5e5e5] w-full">
             <!-- Job 1 -->
             <div class="relative mb-8 pl-6">
-                <div class="absolute bg-gray-300 w-4 h-4 rounded-full top-2.5" style="margin-left: -2.1rem;"></div>
-                <h3 class="text-blue-300 font-semibold">Jane Street</h3>
+                <div class="absolute bg-[#171717] dark:bg-[#e5e5e5] w-4 h-4 rounded-full top-0.25" style="margin-left: -2.1rem;"></div>
+                <h3 class="text-[#3b82f6] dark:text-blue-300 font-semibold">Jane Street</h3>
                 <h4 class="text-lg font-bold">Insight Spring Programme</h4>
                 <p class="text-gray-400 text-sm">April 2025</p>
                 <p class="mt-2">
@@ -96,8 +106,8 @@
 
             <!-- Job 2 -->
             <div class="relative mb-8 pl-6">
-                <div class="absolute bg-gray-300 w-4 h-4 rounded-full top-2.5" style="margin-left: -2.1rem;"></div>
-                <h3 class="text-blue-300 font-semibold">Legal Pythia</h3>
+                <div class="absolute bg-[#171717] dark:bg-[#e5e5e5] w-4 h-4 rounded-full top-0.5" style="margin-left: -2.1rem;"></div>
+                <h3 class="text-[#3b82f6] dark:text-blue-300 font-semibold">Legal Pythia</h3>
                 <h4 class="text-lg font-bold">AI and Machine Learning Intern</h4>
                 <p class="text-gray-400 text-sm">March 2025</p>
                 <p class="mt-2">
@@ -109,8 +119,8 @@
 
             <!-- Job 3 -->
             <div class="relative mb-8 pl-6">
-                <div class="absolute bg-gray-300 w-4 h-4 rounded-full top-2.5" style="margin-left: -2.1rem;"></div>
-                <h3 class="text-blue-300 font-semibold">Jane Street</h3>
+                <div class="absolute bg-[#171717] dark:bg-[#e5e5e5] w-4 h-4 rounded-full top-0.5" style="margin-left: -2.1rem;"></div>
+                <h3 class="text-[#3b82f6] dark:text-blue-300 font-semibold">Jane Street</h3>
                 <h4 class="text-lg font-bold">Focus Programme</h4>
                 <p class="text-gray-400 text-sm">January 2025</p>
                 <p class="mt-2">
@@ -122,8 +132,8 @@
 
             <!-- Job 4 -->
             <div class="relative mb-8 pl-6">
-                <div class="absolute bg-gray-300 w-4 h-4 rounded-full top-2.5" style="margin-left: -2.1rem;"></div>
-                <h3 class="text-blue-300 font-semibold">J.P. Morgan Chase</h3>
+                <div class="absolute bg-[#171717] dark:bg-[#e5e5e5] w-4 h-4 rounded-full top-0.5" style="margin-left: -2.1rem;"></div>
+                <h3 class="text-[#3b82f6] dark:text-blue-300 font-semibold">J.P. Morgan Chase</h3>
                 <h4 class="text-lg font-bold">Summer Work Experience</h4>
                 <p class="text-gray-400 text-sm">August 2023</p>
                 <p class="mt-2">
@@ -136,10 +146,10 @@
         </div>
 
         <!-- skills section -->
-        <h1 id="skills-section" class="justify-self-left">skills</h1>
+        <h1 id="skills-section" class="justify-self-left text-3xl pl-6 font-bold">skills</h1>
 
         <!-- languages section -->
-        <h1 class="font-medium text-4xl">languages</h1>
+        <h1 class="font-medium text-2xl pl-6">languages</h1>
 
         <div class = "overflow-hidden whitespace-nowrap py-4">
             <div class = "grid grid-flow-col animate-scroll">
@@ -267,74 +277,8 @@
         </div>
         
 
-        <h1 id="projects-section" class="justify-self-left pt-10">projects</h1>
+        <h1 id="projects-section" class="justify-self-left pt-10 pl-6 text-3xl font-bold">projects</h1>
         <p class="text-gray-300 text-lg font-medium justify-self-center pb-10">coming soon</p>
-
-        <!-- insert form here -->
-        <!-- CONTACT SECTION -->
-        <h1 id="contact-section" class="justify-self-center pb-10">contact</h1>
-        <div id="contact-form">
-        <form
-            action="https://formspree.io/f/mnnpzyre"
-            method="POST"
-            class="container max-w-3/4 mx-auto border-2 border-solid border-gray-300 p-6 rounded-lg justify-self-center shadow-sm"
-        >
-            
-            <!-- NAME FIELD -->
-            <div class="mb-4">
-                <label for="name" class="block mb-1 font-semibold text-gray-300">
-                    Your Name:
-                </label>
-                <input
-                    name="name"
-                    id="name"
-                    rows="1"
-                    required
-                    class="w-full px-3 py-2 border border-gray-600 rounded bg-gray-700 text-gray-300
-                        focus:outline-none focus:border-gray-300"
-                ></input>
-                </div>
-            
-            <!-- EMAIL FIELD -->
-            <div class="mb-4">
-            <label for="email" class="block mb-1 font-semibold text-gray-300">
-                Your Email:
-            </label>
-            <input
-                type="email"
-                name="email"
-                id="email"
-                required
-                class="w-full px-3 py-2 border border-gray-600 rounded bg-gray-700 text-gray-300
-                    focus:outline-none focus:border-gray-300"
-            />
-            </div>
-
-            <!-- MESSAGE FIELD -->
-            <div class="mb-4">
-            <label for="message" class="block mb-1 font-semibold text-gray-300">
-                Your Message:
-            </label>
-            <textarea
-                name="message"
-                id="message"
-                rows="4"
-                required
-                class="w-full px-3 py-2 border border-gray-600 rounded bg-gray-700 text-gray-300
-                    focus:outline-none focus:border-gray-300"
-            ></textarea>
-            </div>
-
-            <!-- SUBMIT BUTTON -->
-            <button
-            type="submit"
-            class="px-4 py-2 border border-gray-300 text-white rounded hover:bg-gray-300 hover:text-gray-900
-                    transition duration-300 font-semibold"
-            >
-            Send
-            </button>
-  </form>
-</div>
 
     </main>
 
