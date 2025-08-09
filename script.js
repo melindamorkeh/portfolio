@@ -87,7 +87,7 @@ const projects = [
         title: "Algtrax: Algorithm Visualiser",
         icon: "fa-solid fa-chart-line",
         technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Monaco Editor"],
-        url: "https://github.com/melindamorkeh/algtrax"
+        url: "https://algtrax.app"
     },
     {
         title: "Scanly: CV Scanner",
